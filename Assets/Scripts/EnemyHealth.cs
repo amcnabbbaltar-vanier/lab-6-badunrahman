@@ -21,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.value = currentHealth;
+
         if (currentHealth <= 0)
         {
             Die();
@@ -29,11 +30,12 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        if(GameManager.Instance != null) {
-            GameManager.Instance.IncrementScore();
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.AddScore(1);
             GameManager.Instance.LoadNextScene();
+        }
+
         Debug.Log("The enemy has died");
     }
-
 }
-

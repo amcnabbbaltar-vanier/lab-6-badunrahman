@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
 
     public Text scoreText;
-    private int score = 0;
+    public int score = 0;
 
     public int targetScore = 4; // Score to reach before changing scenes
 
